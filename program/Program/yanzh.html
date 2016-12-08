@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <!--css framework -->
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!-- auto css -->
+    <link href="libs/common/common.css" rel="stylesheet" />
+
+
+    <!--js plugin -->
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.metadata.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.extend.methods.js"></script>
+    <script src="libs/jquery-validation-1.15.0/messages_zh.js"></script>
+    <!-- auto js -->
+    <script type="text/javascript">
+    	$(document).ready(function(){
+		  	$("#commentForm").validate();
+		 });
+    </script>
+</head>
+<body>
+	<form id="commentForm" method="get" action="" >
+ <fieldset>
+ <legend>表单验证</legend>
+<div>
+ <p><label>Name</label><input name="name" class="required" maxlength="4" minlength="2" /></p>
+ </div>
+ <p>
+	 <label >E-Mail</label>
+	 <input name="email" class="required email" />
+ </p>
+ <p><label >URL</label><input name="url" class="url"/></p>
+ <p><label>text</label><textarea name="text" cols="22" class="required"></textarea></p>
+ <div><p><input class="submit" type="submit" value="提交"/></p></div>
+ </fieldset>
+ </form>
+</body>
+</html>

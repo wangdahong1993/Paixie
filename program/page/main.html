@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>main</title>
+	<meta charset="utf-8" />
+    <!--css framework -->
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!-- auto css -->
+    <link href="libs/common/common.css" rel="stylesheet" />
+    <link href="libs/page-css/main.css" rel="stylesheet" />
+
+
+    <!--js plugin -->
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.metadata.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.extend.methods.js"></script>
+    <script src="libs/jquery-validation-1.15.0/messages_zh.js"></script>
+    <!-- auto js -->
+    <script src="libs/common/common.js"></script>
+    <!--<script src="libs/page-js/main.js"></script>-->
+</head>
+<body>
+    <div class="dk-header">
+        <span class="label label-success" id="username"></span>
+    </div>
+    <div class="dk-menu">
+        <ul class="list-group">
+            <li class="list-group-item" id="project">项目</li>
+            <li class="list-group-item">用户</li>
+            <li class="list-group-item" id="logout">退出登陆</li>
+        </ul>
+    </div>
+    <div class="dk-container"></div>
+
+    <script type="text/javascript">
+        $(function () {
+            var userInformation;
+            //获取当前登录的用户信息
+            $.post(common.baseUrl + 'Account/Index', function (response) {
+                if (response && response.state && response.data) {
+                    userInformation = response;
+                    //把当前登录的用户名显示在顶部
+                    $('#username').text(response.data.username);
+                }
+            })
+
+            //退出登录功能
+            $('#logout').click(function () {
+                $.post(common.baseUrl + 'Account/LogOut', function (response) {
+                    if (response.state) {
+                        window.location.href = 'login2.html';
+                    }
+                })
+            })
+
+            //查看项目并可下载项目
+            $('#project').click(function () {
+                $('.dk-container').load('project.html?r=' + Math.random(), function () {
+                    $('#projectName').text(userInformation.data.projectname).prop('href', common.baseUrl + 'file/DownLoad');
+                });
+            })
+        })
+    </script>
+</body>
+</html>

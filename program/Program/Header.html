@@ -1,0 +1,192 @@
+	<script type="text/javascript">
+		$('.all_btnright').hover(function(){
+			$(this).css("overflow","visible")
+		},function(){
+			$(this).css("overflow","hidden")
+		})
+		$('.all_txtright').hover(function(){
+			$(this).css("overflow","visible")
+		},function(){
+			$(this).css("overflow","hidden")
+		})
+		$('.all_qrright').hover(function(){
+			$(this).css("overflow","visible")
+		},function(){
+			$(this).css("overflow","hidden")
+		})
+		$(".login_paixie").hover(function(){
+			$(this).find("ul").css("display","block")
+		},function(){
+			$(this).find("ul").css("display","none")
+		})
+		$(".login_nav").hover(function(){
+			$(this).find("ul").css("display","block")
+		},function(){
+			$(this).find("ul").css("display","none")
+		})
+		$(".login_cart").hover(function(){
+			$(this).css("overflow","visible")
+		},function(){
+			$(this).css("overflow","hidden")
+		})
+		$('.input_button').on('click',function(){
+			window.location.href ='Search.html'
+		})
+		
+		var NAME=getCookie('name');
+		if (NAME!='') {
+			$('#loginOut').empty()
+			var HTML=('<p>您好，欢迎来拍鞋网！'+NAME+'<a  id="logout">注销</a></p>');
+			$(HTML).appendTo('#loginOut');
+		}
+
+		$('#logout').on('click',function(){
+			removeCookie('name');
+			window.location.href ='Login.html'
+		})
+	</script>
+	
+	
+	<div id="allrightshow">
+		<div class="allright_top">
+			<span class="all_btnright">
+				<a href="Car.html" class="right_cart do_click" id="right_cart" title="购物车">
+					<span>购物车</span>
+					<i>0</i>
+				</a>
+				<div class="loginnocart" id="loginnocart">
+						<span></span>
+						<p>主人，不要太小气嘛，多放点商品来陪伴我吧 <a href="http://www.paixie.net/">去挑选</a></p>
+				</div>
+			</span>
+			<span class="all_txtright">
+				<a class="right_news do_click"></a>
+				<div class="allright_libox righttext">优惠信息</div>
+			</span>
+			<span class="all_txtright">
+				<a href="" class="right_hotstory do_click"></a>
+				<div class="allright_libox righttext" >历史记录</div>
+			</span>
+			<span class="all_txtright">
+				<a href="" class="right_kefu" ></a>
+				<div class="allright_libox righttext"  >在线客服</div>
+			</span>
+		</div>
+		<div class="allright_foot">
+			<span class="all_qrright">
+				<a class="right_code" href=""></a>
+				<div class="allright_libox rightcodebox"></div>
+			</span>
+		</div>
+	</div>
+	<div class="paixie_head">
+		<div class="paixie_head">
+		<div class="head_topline">
+			<div class="head_topLoginleft" >
+				<a href="" class="mbicon"></a>
+				<p id="loginOut" style="display: block;">
+					<span>您好，欢迎来拍鞋网！</span>
+						<a href="Login.html" class="dologinBtn" title="请登录"></a>
+					<span>
+						<a href="SignUp.html">免费注册 <i></i></a>
+					</span>
+				</p>
+			</div>
+			<div class="head_topLoginright">
+				<span class="login_cart">
+					<a href="Car.html">
+						<i class="cartione"></i>
+						购物车
+						<b class="cartbone">0</b>
+					</a>
+					<div class="cartshow" id="js-minicart-box" >
+						<b class="cartboth" id="cartbothtop" style="">您还没有购买任何商品，快去挑选把！</b>
+					</div>
+				</span>
+				<i class="login_icon">|</i>
+				<span class="login_paixie">
+					<a id="_paixie" >我的拍鞋
+						<i></i>
+					</a>
+					<ul class="login_paixie_ul" style="display:none ;">
+						<li>
+							<a href="http://www.paixie.net/member/user_orderlist?time=1">我的订单</a>
+						</li>
+						<li>
+							<a href="http://www.paixie.net/member/user_favorites" target="_blank">我的收藏</a>
+						</li>
+						<li>
+							<a href="http://www.paixie.net/member/user_offercard?t=2" target="_blank">我的优惠券</a>
+						</li>
+					</ul>
+				</span>
+				<i class="login_icon">|</i>
+				<span class="login_message">
+					<a href="" class="">
+					消息
+					</a>
+					<div></div>
+				</span>
+				<i class="login_icon">|</i>
+				<span class="login_zone">
+					<a href="" class="">
+					会员俱乐部
+					</a>
+				</span>
+				<i class="login_icon">|</i>
+				<span class="login_nav">
+					<a href="" >
+					网站导航
+					<i></i>
+					</a>
+					<ul class="login_nav_ul" style="display: none;">
+						<li><a href="#" >商家入驻</a></li>
+						<li><a href="#" >了解拍鞋网</a></li>
+						<li><a href="#" >拍鞋公益</a></li>
+						<li><a href="#" >网站地图</a></li>
+						<li><a href="#" >新手帮助</a></li>
+					</ul>
+				</span>
+
+			</div>
+		</div>
+		<div class="head_logo_so">
+			<div >
+				<a class="head_logo" href="Main.html" class=""></a>
+			</div>
+			<div class="head_sobox">
+				<div class="sobox_input">
+					<input class="input_text" type="text" name="" value="" placeholder="">
+					<input class="input_button" type="button" name="" value="搜索">
+				</div>
+				<div class="sobox_a">
+					<a class="sobox_a_a" href='#'>跑步鞋</a>
+					<a class="sobox_a_a" href='#'>跑步鞋</a>
+					<a class="sobox_a_a" href='#'>跑步鞋</a>
+					<a class="sobox_a_a" href='#'>跑步鞋</a>
+					<a class="sobox_a_a" href='#'>跑步鞋</a>
+					<a class="sobox_a_a" href='#'>跑步鞋</a>
+				
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<div class="head_nav">
+			<div class="nav_left">
+				<i class="hmsicon" ></i> 
+				<span class="classification">全部商品分类</span>
+			</div>
+			<div class="nav_middel">
+				<a href="#">首页</a>
+				<a href="#">爱团购</a>
+				<a href="#">闪购</a>
+				<a href="#">今日特价</a>
+			</div>
+			<div class="QR_code">
+				<a href="#" ></a>
+			</div>
+		</div>
+		
+	</div>

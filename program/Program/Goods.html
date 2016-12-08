@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+				<!--css framework -->
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!-- auto css -->
+    <link rel="stylesheet"  href="libs/page-css/reset.css">
+    <link href="libs/common/common.css" rel="stylesheet" />
+    <link href="libs/page-css/Goods.css" rel="stylesheet" />
+
+
+
+
+
+    <!--js plugin -->
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.metadata.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.extend.methods.js"></script>
+    <script src="libs/jquery-validation-1.15.0/messages_zh.js"></script>
+    <!-- auto js -->
+    <script src="libs/common/common.js"></script>
+    <script src="libs/page-js/Goods.js"></script>
+<script type="text/javascript">
+
+</script>
+
+	</head>
+	<body>
+		<div id="Header"></div>
+		<div class="Goods_body">
+			<div class="location">
+				<a >拍鞋首页</a> 〉
+		  		<a >邦特官方网站</a> &gt;
+				<a>邦特跑步鞋</a>
+			</div>
+			<div class="proImg">
+				<div class="bigImg">
+					<a>
+						<img src="imgs/81289_483_p.jpg" />
+					</a>
+				</div>
+				<i class="proimg_tip"></i>
+				<i class="imgleft" id="js_imgleft" style="display: inline;"></i>
+				<div class="imglistbox">
+					<ul>
+						<li>
+							<a>
+								<img src="imgs/81289_483_p.jpg" />
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="imgs/81289_483_p.jpg" />
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="imgs/81289_483_p.jpg" />
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="imgs/81289_483_p.jpg" />
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="imgs/81289_483_p.jpg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<i class="imgrihgt" id="js_imgright" style="display: inline;"></i>
+				<div class="share">
+					<div>
+						<span><i></i>分享</span>
+					</div>
+					<a class="favPro" >
+						<i></i>收藏(<b>25</b>)
+					</a>
+				</div>
+			</div>
+			<div class="pside">
+				<div class="self">
+					<a class="self-logo">
+						<img src="imgs/plogo.jpg" />
+						邦特(BANGTE)
+					</a>
+					<a class="self-customer-service">
+						<i></i>
+						在线客服
+					</a>
+				</div>
+				<dl class="pledges">
+					<dt>服务承诺</dt>
+					<dd><i class="genuine"></i>正品保证 假一赔十</dd>
+					<dd><i class="returns"></i>15天无理由免邮退换货</dd>
+					<dd><i class="difference"></i>10天保值 差价返还</dd>			
+				</dl>
+				<div class="list">
+					<h3>
+						<p><span>最近浏览的商品</span></p>
+					</h3>
+					<ul class="js_recent">
+						<li>
+							<img src="imgs/92348052-1_484_p_thumb_180180.jpg" />
+							<div>
+								<span class="oof">￥</span>139.00
+							</div>
+						</li>
+						<li>
+							<img src="imgs/92348052-1_484_p_thumb_180180.jpg" />
+							<div>
+								<span class="oof">￥</span>139.00
+							</div>
+						</li>
+						<li>
+							<img src="imgs/92348052-1_484_p_thumb_180180.jpg" />
+							<div>
+								<span class="oof">￥</span>139.00
+							</div>
+						</li>
+						<li>
+							<img src="imgs/92348052-1_484_p_thumb_180180.jpg" />
+							<div>
+								<span class="oof">￥</span>139.00
+							</div>
+						</li>
+						<li>
+							<img src="imgs/92348052-1_484_p_thumb_180180.jpg" />
+							<div>
+								<span class="oof">￥</span>139.00
+							</div>
+						</li>
+						<li>
+							<img src="imgs/92348052-1_484_p_thumb_180180.jpg" />
+							<div>
+								<span class="oof">￥</span>139.00
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="proinfo">
+				<h1 title="邦特 韩版休闲男士厚底轻便减震系带跑步鞋 深蓝 81289">邦特 韩版休闲男士厚底轻便减震系带跑步鞋 深蓝 81289</h1>
+				<div class="pricebox">
+					<div class="box float fho">
+						<div>
+							市场价：<del><span class="oof">￥</span>259.00</del> （3.4折）
+						</div>
+						<div class="codeno">商品货号：81289</div>
+					</div>
+					<div class="box float">
+						<div>拍鞋价：</div>
+						<div class="redoof">￥</div>
+						<div class="current_price" id="js_current_price">89.00</div>
+					</div>
+				</div>
+				<div class="box float fare">
+					<div>运<span class="pl1em">费</span>：</div>
+					<div class="gray6">至</div>
+					<div class="fareInfo gray6">
+						<p id="fareArea" class="fareArea"><span>福建</span><i></i></p>
+					</div>
+					<div class="gray6 pr1em">快递：
+						<span id="js_freightnum">8</span>
+						元，该商品不支持货到付款
+					</div>
+				</div>
+				<div class="amount">
+					<p>用户评论 <b class="red">62</b></p>
+					<p>销售数量 <b class="red">463</b></p>
+					<p class="last">赠
+						<a >拍鞋币</a>
+						<b class="green">89</b>
+					</p>
+				</div>
+				<div class="selectbox">
+					<form id="form">
+						<div class="colorbox">
+							<p>颜<span class="pl1em">色：</span></p>
+							<ul class="js-good-color-list">
+								<li class="current">
+									<i></i>
+									<a>
+										<img src="imgs/81289_483_p_thumb_8080.jpg" />
+									</a>
+								</li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						<div class="sizebox">
+							<p>尺
+								<span class="pl1em">码：</span>
+							</p>
+							<ul id="js_size1">
+								<li>
+									<a>39</a>
+								</li>
+								<li>
+									<a>43</a>
+								</li>
+								<li>
+									<a>44</a>
+								</li>
+							</ul>
+							<div class="clear"></div>
+						</div>						
+						<div class="sumbox">
+							<p>数<span class="pl1em">量：</span></p>
+							<i class="numDown numdownNo"></i>
+							<input rel="" value="1" name="num" class="numText">
+							<i class="numUp"></i>
+						</div>
+						<div class="buttonbox">
+							<div class="payments">
+								<div>
+								<p>支付方式<i></i></p>
+								<ul style="display: none;">
+									<li><a>支付宝</a></li>
+									<li><a>在线银联支付</a></li>
+									<li><a>财付通</a></li>
+									<li><a>信用卡快捷</a></li>
+									<li><a>网银支付</a></li>
+								</ul>
+								</div>
+							</div>
+							<input class="bred" type="button" value="立即购买" rel="buy" id="tj_buy">
+							<input class="borg" type="button" value="加入购物车" rel="addcart" id="tj_addcart">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="description">
+				<div class="tabbar">
+					<ul>
+						<li class="Informations current" rel="details">商品详情</li>
+						<li class="CommentCont" rel="commentCont" class="">用户评论</li>
+						<li rel="promise" class="">购物保障</li>
+						<li rel="paydelivery" class="">支付与配送</li>
+						<li rel="measurement" style="display:none">尺码测量</li>
+					</ul>
+					<div>
+						<p>手机下单更方便<i></i>
+							<span style="display: none;"><img src="imgs/1260575_100100.png"></span>
+						</p>
+					</div>
+				</div>
+				<div id="js_details" class="details" style="display: none;">
+					<ul class="detailso">
+						<li><b>货号：</b><strong>邦特 81289</strong></li>
+		                <li><b>品牌：</b><a>邦特</a></li>
+						<li><b>款式：</b><a>男跑步鞋</a></li>
+						<li><b>颜色：</b><span>深蓝</span></li>
+						<li><b>分类：</b><span>运动鞋</span></li>
+						<li><b>鞋码偏差：</b><span>正常</span></li>
+						<li><b>闭合方式：</b><span>系带</span></li>
+						<li><b>适合季节：</b><span>不限季节</span></li>
+						<li><b>流行元素：</b><span>车缝线</span></li>
+						<li><b>运动鞋科技：</b><span>易弯折功能</span></li>
+						<li><b>性别：</b><span>男</span></li>
+						<li><b>适合场地：</b><span>跑道</span></li>
+						<li><b>帮面材质：</b><span>织物</span></li>
+						<li><b>外底材料：</b><span>EVA</span></li>
+						<li><b>运动鞋功能：</b><span>轻便</span></li>
+						<li><b>商品编码：</b><span>1260575</span></li>
+						<li class="clear"></li>
+					</ul>
+					<div class="size-table"></div>	
+				</div>
+			</div>
+			<div class="subdescription">
+				<div class="subtabbar" id="subtabbar">
+					<i class="top"></i>
+					<ul>
+						<li class="current" ><i></i>商品详情</li>
+						<li class=""><i></i>用户评论</li>
+						<li class=""><i></i>购物保障</li>
+						<li class=""><i></i>支付与配送</li>
+						<li><i></i>尺码测量</li>
+					</ul>
+					<i class="bot"></i>
+				</div>
+				<div class="detailsimg" >
+					<div class="infoimg">
+						<img src="imgs/infoimg.jpg" />
+					</div>
+				</div>
+				<div id="js_commentCont" class="commentCont" style="display: none;">
+					<div class="comment-fractions">
+						<p class="comment-fraction">
+							综合满意指数
+							<span class="red"><strong>4.8</strong>分</span>
+							<i class="star"><i style="width:96%;"></i></i>
+						</p>
+						<p class="comment-satisfied">
+							<span class="satisfied">
+								<span style="width:78%;"></span>
+							</span>
+							<b class="pl1em">非常不满意</b>
+							<b>不满意</b>
+							<b>一般</b>
+							<b>满意</b> 
+							<b>非常满意</b>
+						</p>
+						<a class="comment-go-comment">我要评论</a>
+					</div>
+					<div id="js-comment-filter" class="comment-filter">
+						<a rel="nosatisfied">不满意<i>（0）</i></a>
+						<a rel="general">一般<i>（1）</i></a>
+						<a rel="satisfied">满意<i>（61）</i></a>
+						<a class="selected" rel="all">全部<i>（62）</i></a>
+					</div>
+					<ul id="js-comment-list" class="comment-list">
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						<li>
+							<div class="user-info">
+								<i class="grade-1"></i>
+								15***02
+							</div>
+							<div class="comment-info">
+								<h3>
+									<p><span>购买颜色：</span>深蓝</p>
+									<span>尺码：</span>43
+									<i class="star"><i style="width:100%;"></i></i>
+								</h3>
+								<div>
+									宝贝很不错
+									<br>
+									<span>2016-10-29 14:56:16</span>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="Footer"></div>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+.login-content {
+	width: 978px;
+	border: 1px solid #dadada;
+	background: #fff;
+	margin: 0 auto;
+	-moz-box-shadow: 3px 3px 3px #EFEFEF;
+	-webkit-box-shadow: 3px 3px 3px #EFEFEF;
+	-ms-box-shadow: 3px 3px 3px #EFEFEF;
+	box-shadow: 3px 3px 3px #EFEFEF;
+}
+.register-area {
+	padding: 40px 30px 58px 30px;
+	overflow: hidden;
+}
+.register-area .form-area {
+	width: 670px;
+	float: left;
+	border-right: 1px dashed #d2d2d2;
+}
+.register-area .form-area label {
+	width: 80px;
+	font-size: 14px;
+	display: inline-block;
+	text-align: right;
+}
+.register-area .form-area .base-text {
+	margin: 14px 5px;
+}
+.login-content .base-text {
+	border: 1px solid #dadada;
+	display: inline-block;
+	vertical-align: middle;
+	background: #fff;
+	width: 290px;
+	position: relative;
+	height: 36px;
+	line-height: 36px;
+	margin: 5px;
+}
+.register-area .agreement label {
+	line-height: 22px;
+	width: auto;
+	margin: 0 0 0 85px;
+	text-align: left;
+	font-size: 12px;
+	color: #878787;
+}
+.register-area .agreement input {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.register-area .blue-button {
+	width: 272px;
+	margin: 14px 0 0 85px;
+}
+.login-content .blue-button {
+	line-height: 40px;
+	height: 40px;
+	background: #0487df;
+	color: #fff;
+	font-size: 14px;
+	display: inline-block;
+	border-radius: 2px;
+	padding: 0 10px;
+	text-align: center;
+	margin: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 0 none;
+	position: relative;
+}
+#button-area{
+	display: block;
+	margin-left: 80px;
+}
+.register-area .side {
+	color: #919191;
+	line-height: 40px;
+	float: left;
+	display: inline;
+	margin-left: 30px;
+}
+.register-area .side a {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	color: #fff;
+	text-indent: 30px;
+	background-position: -118px 0;
+	letter-spacing: 2px;
+	margin-bottom: 4px;
+}
+#commentForm label.error{
+border: 1px solid #dadada;
+display:inline-block;
+vertical-align: middle;
+background: #7ABD54;
+color: #fff;
+width: auto;
+position: relative;
+height: 36px;
+line-height: 36px;
+margin: 14px 5px;
+}
+		

@@ -1,0 +1,35 @@
+	    html, body {
+			min-width: 980px;
+		}
+		body {
+			background: #f5f5f5 !important;
+			color: #333;
+			overflow-y: scroll;
+		}	
+		body, button {
+			font: 12px \5b8b\4f53,tahoma,arial,sans-serif;
+			font-family: Arial;
+			background-color: #fff; 
+			color: #666;
+		}
+    	.login-header{
+    		margin: 31px auto;
+			width: 980px;
+    	}
+    	.login-header a.logo{ 
+			width: 214px;
+			height: 86px;
+			background: url(../../imgs/paixie_icon.png) no-repeat -115px -117px;
+			display: inline-block;
+			vertical-align: middle; 
+		}
+		.login-header h1 {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 20px;
+			font-weight: normal;
+			padding-left: 10px;
+		}
+		.yh {
+			font-family: 微软雅黑;
+		}

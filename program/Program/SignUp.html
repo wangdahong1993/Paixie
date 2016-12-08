@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>欢迎注册</title>
+	<!--css framework -->
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!-- auto css -->
+    <link rel="stylesheet"  href="libs/page-css/reset.css">
+    <link href="libs/common/common.css" rel="stylesheet" />
+    <link href="libs/page-css/Header.css" rel="stylesheet" />
+    <link href="libs/page-css/Footer.css" rel="stylesheet" />
+    <link href="libs/page-css/SignUp.css" rel="stylesheet" />
+
+
+
+
+
+    <!--js plugin -->
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.metadata.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.extend.methods.js"></script>
+    <script src="libs/jquery-validation-1.15.0/messages_zh.js"></script>
+        <script src="libs/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+
+    <!-- auto js -->
+    <script src="libs/common/common.js"></script>
+    <script src="libs/page-js/SignUp.js"></script>
+
+
+    <script type="text/javascript">
+    	
+    </script>
+</head>
+<body>
+	<script type="text/javascript">
+    	
+    </script>
+	<div class="login-header">
+		<a href="Main.html" class="logo"></a>
+		<h1 class="yh">欢迎注册</h1>
+	</div>
+	<div class="login-content yh">
+		<div class="register-area" >
+			<div class="form-area">
+				<form id="commentForm" method="get">
+					<fieldset>
+					<p>
+						<label class="yh" >账户名:</label>
+ 						<input name="name" class=" base-text" placeholder="请输入手机号/邮箱"  required>
+					</p>
+					<p>
+						<label class="yh" >设置密码:</label>
+ 						<input id="Password" name="password" class=" base-text" placeholder="6-20位字符，可使用字母、数字或符号的组合"minlength="6" maxlength="20"   required>
+					</p>
+					<p>
+						<label class="yh" >确认密码:</label>
+ 						<input name="repassword" class=" base-text" placeholder="请再次输入密码" equalTo="#Password" required>
+					</p>
+					<div class="agreement">
+						<label>
+							<input type="checkbox">
+							我已阅读并同意
+						</label>
+						<a href="/servicepolicy.html" target="_blank">《拍鞋服务协议》</a>
+					</div>
+					<p id="button-area">
+						<input class="submit blue-button yh f16" type="submit" value="提交"/>
+					</p>
+					</fieldset>
+				</form>
+			</div>
+			<div class="side">
+				我已有拍鞋网账户<br>
+				现在就 <a href="Login.html">立即登录</a>
+			</div>
+		</div>
+	</div>
+	<div class="login-footer w980 yh">
+		增值电信业务经营许可证：闽B2-20110084值电信业务经营许可证：闽B2-20110084
+	</div>
+</body>
+</html>

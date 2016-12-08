@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+					<!--css framework -->
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!-- auto css -->
+    <link rel="stylesheet"  href="libs/page-css/reset.css">
+    <link href="libs/common/common.css" rel="stylesheet" />
+    <link href="libs/page-css/Car.css" rel="stylesheet" />
+
+
+
+
+
+    <!--js plugin -->
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.metadata.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.extend.methods.js"></script>
+    <script src="libs/jquery-validation-1.15.0/messages_zh.js"></script>
+    <!-- auto js -->
+    <script src="libs/common/common.js"></script>
+    <script src="libs/page-js/Car.js"></script>
+	</head>
+	<body>
+		<div class="cart-area-header">
+			<div class="w980" style="width: 1200px;">
+				<a href="Main.html" target="_blank" class="logo"></a>
+				<p>
+					<span id="js-user-info">
+			您好，欢迎来拍鞋网！
+					<a class="login" href="/login.html">[登录]</a>
+					<a class="register" href="/register.html">[注册]</a>
+					</span>
+					<ins class="step1">
+						<span class="one">1.选择商品</span>
+						<span class="two">2.确认订单信息</span>
+						<span class="three">3.成功提交订单</span>
+					</ins>
+				</p>
+			</div>
+			<i></i>
+		</div>
+		<div class="cart-area-body">
+			<div class="w980 area-cart-title" style="width: 1200px;">
+				<strong class="yh">我的购物车</strong>
+				<span class="gray1"><span id="js-cart-num">3</span>/50</span>
+				<span class="gray2">您购物车的商品将被永久保存</span>
+				<p class="gray2"><img src="imgs/empty.gif" width="20" height="20">商品价格请以订单提交时为准</p>
+			</div>
+			<form id="form" method="post">
+				<table class="w980 gray2 area-goods-title" cellpadding="0" cellspacing="0" style="width: 1200px;">
+					<tbody>
+						<tr>
+							<th width="30" class="first"><input class="js-select-all carttop on" type="checkbox" checked=""></th>
+							<th width="95" align="left">全选</th>
+							<th width="318">商品名称</th>
+							<th>拍鞋价（元）</th>
+							<th width="180">数量</th>
+							<th width="170">小计（元）</th>
+							<th class="last" width="100">操作</th>
+						</tr>
+					</tbody>
+				</table>
+	
+
+				<div id="list"></div>
+				
+				
+				<div id="list_pages">
+					<div class="big_pages" style="width: 412px;">
+						<a class="prev">&nbsp;</a>
+							<div id="little_pages"></div>
+						<a class="next">&nbsp;</a>
+					</div>
+				</div>
+				
+				
+				<div class="w980" id="area-go-pay" style="position: relative; left: 50%; z-index: 100; margin-left: -600px; width: 1200px; bottom: 0px;">
+					<div class="area-go-pay">
+						<label class="xcartall">
+							<input name="" value="" type="checkbox" class="js-select-all input on" checked="">
+							<a class="gray2" id="js-select-all">全选</a>
+						</label>
+						<a id="js_del">删除选中商品</a>
+						<a href="/">继续购物</a>
+						<a href="javascript:;" id="clear_cart">清空购物车</a>
+						已选 <b class="orange cart_size" id="js-cart-numt">1</b> 件商品    合计（不含运费）：<strong class="orange yh" id="js-total">￥99.00</strong>
+						<a id="js-go-pay" class="go-pay">去结算&gt;</a>
+					</div>
+				</div>
+				</form>
+		</div>
+		<div class="area-cart-footer" style="margin-top: 0px;">
+			<div class="w980" style="width: 1200px;">
+				<p>
+					<strong class="yh">关于运费</strong>
+					<span class="gray1">拍鞋自营满129元免运费</span><br><a>更多运费信息</a>
+				</p>
+				<p>
+					<strong class="yh">退换货政策</strong>
+					<span class="gray1">拍鞋网提供15天无理由免邮退换货服务</span><br><a>查看具体信息</a>
+				</p>
+				<p>
+					<strong class="yh">客户服务</strong>
+					<span class="gray1">需要帮助？请拨打</span><b class="orange">4008-81-82-83</b><br><span class="gray1">服务时间 8:30-21:00</span>
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

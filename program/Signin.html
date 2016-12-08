@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	<style type="text/css" media="screen">
+		body{
+    font-family: Microsoft Yahei;
+    font-size: 15px;
+}
+
+fieldset{    width: 680px;    }
+
+legend{    margin-left: 8px;    }
+
+.item{
+    height: 56px;
+    line-height: 36px;
+    margin: 10px;
+}
+
+.item .item-label{
+    float: left;
+    width: 80px;
+    text-align: right;
+}
+
+.item-text{
+    float: left;
+    width: 244px;
+    height: 16px;
+    padding: 9px 25px 9px 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.item-select{
+    float: left;
+    height: 34px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 6px 0px;
+}
+
+.item-submit{
+    margin-left: 88px;
+}
+
+input.error{
+    border: 1px solid #E6594E;
+}
+
+input.highlight{
+    border: 1px solid #7abd54;
+}
+
+label.error,label.tip{
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 5px;
+    padding-left: 20px;
+    color: red;
+    background: url('error.png') no-repeat left center;
+}
+
+label.tip{
+    color: #aaa;
+    background: url('tip.png') no-repeat left center;
+}
+
+label.valid{
+    background: url('valid.png') no-repeat left center;
+    width: 32px;
+}
+	</style>
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<!--2.引入插件-->
+	<script type="text/javascript" src="js/jquery.validate.js"></script>
+	<!-- 3.添加语言包 -->
+	<script type="text/javascript" src="js/jquery.validate.messages_zh.js"></script>
+	<script type="text/javascript">
+		$.validator.setDefaults({
+    /*关闭键盘输入时的实时校验*/
+    onkeyup: null,
+    /*添加校验成功后的执行函数--修改提示内容，并为正确提示信息添加新的样式(默认是valid)*/
+    success: function(label){
+        /*label的默认正确样式为valid，需要通过validClass来重置，否则这里添加的其他样式不能被清除*/
+        label.text('').addClass('valid');
+    },
+    /*重写校验元素获得焦点后的执行函数--增加[1.光标移入元素时的帮助提示,2.校验元素的高亮显示]两个功能点*/
+    onfocusin: function( element ) {
+        this.lastActive = element;
+        
+        /*1.帮助提示功能*/
+        this.addWrapper(this.errorsFor(element)).hide();
+        var tip = $(element).attr('tip');
+        if(tip && $(element).parent().children(".tip").length === 0){
+            $(element).parent().append("<label class='tip'>" + tip + "</label>");
+        }
+        
+        /*2.校验元素的高亮显示*/
+        $(element).addClass('highlight');
+
+        // Hide error label and remove error class on focus if enabled
+        if ( this.settings.focusCleanup ) {
+            if ( this.settings.unhighlight ) {
+                this.settings.unhighlight.call( this, element, this.settings.errorClass, this.settings.validClass );
+            }
+            this.hideThese( this.errorsFor( element ) );
+        }
+    },
+    /*重写校验元素焦点离开时的执行函数--移除[1.添加的帮助提示,2.校验元素的高亮显示]*/
+    onfocusout: function( element ) {
+        /*1.帮助提示信息移除*/
+        $(element).parent().children(".tip").remove();
+
+        /*2.校验元素高亮样式移除*/
+        $(element).removeClass('highlight');
+        
+        /*3.替换下面注释的原始代码，任何时候光标离开元素都触发校验功能*/
+        this.element( element );
+        
+        /*if ( !this.checkable( element ) && ( element.name in this.submitted || !this.optional( element ) ) ) {
+            this.element( element );
+        }*/
+    }
+});
+		
+		
+		
+			$("#submit").click(function(){
+				if($("form").valid()){
+					$.ajax({
+						url:"http://10.16.151.33/course/api/api/Student/Register",
+						type:'post',
+						async:true,
+						dataType:'jsonp',
+						data:{
+							account:$('#account').val(),
+							password:$('#password').val(),
+							PhoneN:$('#PhoneN').val(),
+							email:$('#email').val(),
+							username:$('#username').val(),
+							classes:$("classes").val()
+						},
+						success:function(){
+							console.log('成功');
+							console.log(data);
+							// $(generateHtml(_data)).appendTo("#weather");
+						}
+					
+					})
+					
+				}
+				return false;
+			})
+
+
+
+		
+			
+		
+	</script>
+	<script>
+$(document).ready(function(){
+    $("#regForm").validate({
+        rules: {
+            account:{
+                required: true,
+                minlength: 2
+            },
+            password:{
+                required: true,
+                minlength: 6,
+                maxlength: 16
+            },
+            repassword:{
+                required: true,
+                equalTo: "#password"
+            },
+            PhoneN: {
+                required: true,
+                minlength: 11,
+                maxlength: 11
+            },
+            email:{
+            	required: true,
+            	email:true
+            },
+            username:{
+            	required: true,
+                minlength: 2
+            }
+        },
+        messages:{
+            account:{
+                required: "登录名不能为空",
+                minlength: "登录名的最小长度为2"
+            },
+            password:{
+                required: "密码不能为空",
+                minlength: "密码长度不能少于6个字符",
+                maxlength: "密码长度不能超过16个字符"
+            },
+            repassword:{
+                required: "确认密码不能为空",
+                equalTo: "确认密码和密码不一致"
+            },
+            PhoneN: {
+                required: "手机号长度为11位"
+            },
+            email:{
+            	required: "邮箱不能为空",
+            	email:"邮箱格式不对"
+            },
+            username:{
+            	required: "用户名不能为空",
+                minlength: "用户名的最小长度为2"
+            },
+            submitHandler:function(form){
+            	console.log("验证成功")
+            }
+        }
+    });
+});
+</script>
+</head>
+<body>
+	<form action="#" method="post" id="regForm">
+    <fieldset>
+        <legend>jquery-validate表单校验验证</legend>
+        <div class="item">
+            <label for="account" class="item-label">登录名:</label>
+            <input type="text" id="account" name="account" class="item-text" placeholder="设置登录名"
+            autocomplete="off" tip="请输入登录名">
+        </div>
+        <div class="item">
+            <label for="password" class="item-label">密码:</label>
+            <input type="password" id="password" name="password" class="item-text" placeholder="设置密码"
+            tip="长度为6-16个字符">
+        </div>
+        <div class="item">
+            <label for="password" class="item-label">确认密码:</label>
+            <input type="password" name="repassword" class="item-text" placeholder="设置确认密码">
+        </div>
+        <div class="item">
+            <label for="PhoneN" class="item-label">手机号:</label>
+            <input type="text" id="PhoneN" name="PhoneN" class="item-text" placeholder="手机号码"
+            tip="长度为11">
+        </div>
+        <div class="item">
+            <label for="mail" class="item-label">邮箱:</label>
+            <input type="text" id="mail" name="mail" class="item-text" placeholder="邮箱"
+            tip="">
+        </div>
+        <div class="item">
+            <label for="username" class="item-label">用户名:</label>
+            <input type="text" id="username" name="username" class="item-text" placeholder="设置用户名"
+            tip="请输入用户名">
+        </div>
+        <div class="item">
+            <label for="classes" class="item-label">Class:</label>
+            <input type="text" id="classes" name="classes" class="item-text" placeholder="班级"
+            tip="">
+        </div>
+        <div class="item">
+            <input type="submit" id="submit" value="注册" class="item-submit">
+        </div>
+    </fieldset>
+</form>
+</body>
+</html>

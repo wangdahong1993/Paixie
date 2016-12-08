@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>login</title>
+	<meta charset="utf-8" />
+    <!--plugin-->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!--auto-->
+    <link href="libs/common/common.css" rel="stylesheet" />
+    <link href="libs/page-css/login.css" rel="stylesheet" />
+
+    <!--plugin-->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <!--auto-->
+    <script src="libs/angular/angular.global.js"></script>
+    <script src="libs/common/common.js"></script>
+    <script src="libs/page-js/login.js"></script>
+</head>
+<body>
+    <div class="login" ng-app="pageApp" ng-controller="pageController">
+        <h3>Sign in to your account</h3>
+        <p>Please enter your name and password to log in.</p>
+        <div class="form-group">
+            <span class="input-icon">
+                <input type="text" class="form-control" name="account" placeholder="Account" ng-model="account">
+                <i class="fa fa-user"></i>
+            </span>
+        </div>
+        <div class="form-group form-actions">
+            <span class="input-icon">
+                <input type="password" class="form-control password" name="password" placeholder="Password" ng-model="password">
+                <i class="fa fa-lock"></i>
+            </span>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-bricky pull-right" ng-click="login()">Login 
+            <i class="fa fa-arrow-circle-right"></i>
+            </button>
+        </div>
+        <div class="new-account">
+            <p>Don't have an account yet?</p>
+            <a href="register.html" class="register">
+                Create an account
+            </a>
+        </div>
+    </div>
+</body>
+</html>

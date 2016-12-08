@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表页</title>
+		<!--css framework -->
+    <link href="libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="libs/jquery-confirm/jquery-confirm.css" rel="stylesheet" />
+    <!-- auto css -->
+    <link rel="stylesheet"  href="libs/page-css/reset.css">
+    <link href="libs/common/common.css" rel="stylesheet" />
+    <link href="libs/page-css/Search.css" rel="stylesheet" />
+
+
+
+
+
+    <!--js plugin -->
+    <script src="libs/jquery/jquery-2.1.1.min.js"></script>
+    <script src="libs/jquery-confirm/jquery-confirm.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.min.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.metadata.js"></script>
+    <script src="libs/jquery-validation-1.15.0/jquery.validate.extend.methods.js"></script>
+    <script src="libs/jquery-validation-1.15.0/messages_zh.js"></script>
+    
+    <!-- auto js -->
+    <script src="libs/common/common.js"></script>
+    <script src="libs/page-js/Search.js"></script>
+
+<script type="text/javascript">
+	
+</script>
+	</head>
+	<body>
+		<div id="Header">
+		
+		</div>
+		<div id="body">
+			<div class="probg">
+				<div class="main">
+					<div class="location">
+						<a>首页</a>
+						<span>&gt;</span>
+						<a >所有分类</a> 
+						<span>&gt;</span>
+						<a class="del">款　式：跑步鞋</a>			
+						<a class="empty">清空</a>
+					</div>
+					<div class="filternav">
+						<div class="cate">
+							<b>品<span class="pl2e">牌</span>：</b>
+							<div class="options">
+								<a id="js_brandmore">更多</a>
+								<a class="multiple">多选</a>
+							</div>
+							<div class="catecont">
+								<ul>
+									<li><a >耐克(40)</a></li>
+									<li><a >阿迪达斯(97)</a></li>
+									<li><a >李宁(238)</a></li>
+									<li><a >安踏(4)</a></li>
+									<li><a >鸿星尔克(27)</a></li>
+									<li><a >匹克(129)</a></li>
+									<li><a >耐克(40)</a></li>
+									<li><a >阿迪达斯(97)</a></li>
+									<li><a >李宁(238)</a></li>
+									<li><a >安踏(4)</a></li>
+									<li><a >鸿星尔克(27)</a></li>
+									<li><a >匹克(129)</a></li>
+									<li><a >耐克(40)</a></li>
+									<li><a >阿迪达斯(97)</a></li>
+									<li><a >李宁(238)</a></li>
+									<li><a >安踏(4)</a></li>
+									<li><a >鸿星尔克(27)</a></li>
+									<li><a >匹克(129)</a></li>
+									<li><a >耐克(40)</a></li>
+									<li><a >阿迪达斯(97)</a></li>
+									<li><a >李宁(238)</a></li>
+									<li><a >安踏(4)</a></li>
+									<li><a >鸿星尔克(27)</a></li>
+												
+								</ul>
+							</div>
+						</div>
+						<div class="cate">
+							<b>颜<span class="pl2e">色</span>：</b>
+							<div class="options">
+								<a id="js_brandmore">更多</a>
+								<a class="multiple">多选</a>
+							</div>
+							<div class="catecont">
+								<ul>
+									<li><a >天蓝色(40)</a></li>
+									<li><a >军绿色(97)</a></li>
+									<li><a >宝蓝色(238)</a></li>
+									<li><a >天蓝色(40)</a></li>
+									<li><a >军绿色(97)</a></li>
+									<li><a >宝蓝色(238)</a></li>
+									<li><a >天蓝色(40)</a></li>
+									<li><a >军绿色(97)</a></li>
+									<li><a >宝蓝色(238)</a></li>
+									<li><a >天蓝色(40)</a></li>
+									<li><a >军绿色(97)</a></li>
+									<li><a >宝蓝色(238)</a></li>
+									<li><a >天蓝色(40)</a></li>
+									<li><a >军绿色(97)</a></li>
+									<li><a >宝蓝色(238)</a></li>
+									<li><a >天蓝色(40)</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="options" style="bottom: -25px;">
+							<a href="#" id="jsoptionsmore">更多</a>
+						</div>
+					</div>
+					<div id="thenotext" style="height: 26px; display: block; width: 1200px;"></div>
+					<div class="sortbar">
+						<div class="sortrow">
+							<ul class="sortnav">
+								<li class="current"><a>默认排序</a></li>
+								<li><a >人气</a></li>
+								<li><a >新品</a></li>
+								<li>
+									<a >销量<i></i></a>
+									<p>
+										<a >销量从高到低</a>
+										<a >销量从低到高</a>
+									</p>
+								</li>
+								<li>
+									<a >价格<i></i></a>
+									<p>
+										<a >价格从高到低</a>
+										<a >价格从低到高</a>
+									</p>
+								</li>
+							</ul>
+							<div class="price">
+								<div>
+									<input type="text" value="" placeholder="￥" id="pricemin">
+									<span>-</span>
+									<input type="text" value="" placeholder="￥" id="pricemax">
+									<p style="display: none;">
+										<input type="button" value="清空" class="clear" id="priceclear">
+										<span></span>
+										<input type="button" value="确定" class="submit" id="pricesubmit">
+									</p>
+								</div>
+							</div>
+							<div class="pagers"> 
+								<span class="prev">上一页</span>
+								<span class="total"><b>1</b>/39</span>
+								<a class="next">下一页</a>
+							</div>	
+							<div class="clear"></div>	
+						</div>
+						<ul class="filterrow">
+							<li >货到付款</li>
+							<li >限时促销</li>
+							<li >会员特价</li>
+							<li >团购</li>
+						</ul>
+					</div>
+					
+	<script type="text/javascript">
+		
+	</script>
+		
+				
+				
+					<div id="body_list">
+						<ul id="list">
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		<div id="list_pages">
+						<div class="big_pages">
+							<a class="prev">&nbsp;</a>
+							<div id="little_pages"></div>
+							<a class="next">&nbsp;</a>
+						</div>
+					</div>
+		<div id="Footer">
+		
+		</div>
+	</body>
+</html>

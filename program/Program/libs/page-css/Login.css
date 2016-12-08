@@ -1,0 +1,197 @@
+.login-content {
+	
+	width: 980px;
+	border: 1px solid #dadada;
+	background: #fff;
+	margin: 0 auto;
+	-moz-box-shadow: 3px 3px 3px #EFEFEF;
+	-webkit-box-shadow: 3px 3px 3px #EFEFEF;
+	-ms-box-shadow: 3px 3px 3px #EFEFEF;
+	box-shadow: 3px 3px 3px #EFEFEF;
+}
+.login-area {
+	padding: 30px 63px 30px 63px;
+	overflow: hidden;
+	height: 422px;
+	overflow: hidden;
+	position: relative;
+}
+.login-area .ad img, .login-area .ad {
+	width: 480px;
+	height: 300px;
+	float: left;
+	border: 0;
+	margin: 0;
+}
+.login-area .ad {
+	margin-top: 37px;
+}
+.login-area .form-area {
+	float: right;
+	width: 292px;
+	overflow: hidden;
+}
+.login-area .form-area .form-head {
+	overflow: hidden;
+	line-height: 20px;
+	padding: 8px 0;
+	line-height: 20px;
+
+}
+.login-area .form-area .form-head strong {
+font-weight: normal;
+}
+.login-area .form-area .form-head span, .login-area .form-area .form-head a {
+	float: right;
+	_margin-top: -28px;
+}
+
+.login-area .form-area .form-head span {
+	color: #b7b7b7;
+	margin-right: 10px;
+}
+.login-area .base-text {
+margin: 0;
+}
+
+.login-content .base-text {
+	border: 1px solid #dadada;
+	display: inline-block;
+	vertical-align: middle;
+	background: #fff;
+	width: 292px;
+	position: relative;
+	height: 38px;
+	line-height: 38px;
+	margin: 0;
+	margin-bottom: 28px;
+}
+.login-area .username input, .login-area .password input {
+	margin-left: 35px;
+	width: 227px;
+}
+.login-content .base-text input {
+border: 0 none;
+background: url(http://img-cdn2.paixie.net/images/empty.gif);
+padding: 8px 28px 8px 0;
+line-height: 20px;
+overflow: hidden;
+width: 257px;
+margin-left: 5px;
+position: absolute;
+left: 0;
+top: 0;
+outline: none;
+color: #333;
+font-size: 14px;
+}
+.login-content .username input,.login-content .password input{
+	margin-left: 35px;
+	width: 227px;
+}
+.login-area .password i, .login-area .username i {
+	position: absolute;
+	top: 1px;
+	left: 0;
+	height: 34px;
+	width: 34px;
+	z-index: 1;
+}
+.login-area .password i {
+background-position: 0 -40px;
+top: 0;
+}
+.login-area .auto-login {
+line-height: 20px;
+height: 20px;
+color: #b7b7b7;
+}
+.login-area .auto-login input {
+display: inline-block;
+vertical-align: middle;
+}
+.login-area .auto-login a {
+float: right;
+}
+.login-content .orange-button-mini, .login-content .orange-button {
+	line-height: 40px;
+	height: 40px;
+	background: #f60;
+	color: #fff;
+	font-size: 14px;
+	display: inline-block;
+	border-radius: 2px;
+	padding: 0 10px;
+	text-align: center;
+	margin: 5px;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 0 none;
+	position: relative;
+}
+.login-area .orange-button {
+	display: block;
+	margin: 14px 0 0 0;
+	width: 292px;
+}
+.login-area .other-login {
+	color: #b7b7b7;
+	padding-top: 14px;
+	line-height: 24px;
+}
+.login-area .other-login p {
+padding: 5px 0 0 3px;
+overflow: hidden;
+margin-right: -11px;
+}
+.login-area .other-login p a.qq {
+background-position: 0 -251px;
+}
+.login-area .other-login p a.alipay {
+background-position: -25px -251px;
+}
+.login-area .other-login p a.sina {
+background-position: -49px -251px;
+}
+.login-area .other-login p a.renren {
+background-position: -77px -251px;
+}
+.login-area .other-login p a.netease {
+background-position: -101px -251px;
+}
+.login-area .other-login p a.xunlei {
+background-position: -125px -251px;
+}
+.login-area .other-login p a.baidu {
+background-position: -149px -251px;
+}
+.login-area .other-login p a.qh360 {
+background-position: -173px -251px;
+}
+.login-area .other-login p a.weixin {
+background-position: -197px -251px;
+}
+.login-area .other-login p a.wanlitong {
+background-position: -221px -251px;
+}
+.login-area .other-login p a {
+float: left;
+width: 20px;
+height: 19px;
+overflow: hidden;
+margin-right: 10px;
+margin-top: 0;
+}
+.way {
+width: 60px;
+height: 60px;
+position: absolute;
+bottom: 0px;
+right: 0px;
+}
+.way a {
+display: block;
+width: 100%;
+height: 100%;
+background-position: -0px -299px;
+}
